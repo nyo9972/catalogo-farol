@@ -62,7 +62,8 @@ class ProductController extends Controller
 
 			$product = Product::create([
 				'name'  => $request->input('name'),
-				'model' => $request->input('model')
+				'model' => $request->input('model'),
+				'value' => $request->input('value')
 			]);
 
 			$product->categories()->attach($categories_id);
@@ -110,6 +111,7 @@ class ProductController extends Controller
 		$validator = Validator::make($request->all(), [
 			'name'            => 'required|max:100',
 			'model' 	      => 'max:100',
+			'value' 	      => 'max:100',
 			'category_id'     => 'required|array',
 			'photo'			  => 'image|max:2048'
 		]);
@@ -147,6 +149,7 @@ class ProductController extends Controller
 			// save product change
 			$product->name = $request->input('name');
 			$product->model = $request->input('model');
+			$product->value = $request->input('value');
 			$product->save();
 
 			// update pivot table

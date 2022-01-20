@@ -15,6 +15,7 @@ class ProductTableSeeder extends Seeder
 		$product1 = Product::create([
 			'name'  => 'Hyundai IX20',
 			'model' => '1,4 Blue Drive Classic 5DR',
+			'value' => '45.000',
 			'photo' => 'Hyundai_IX20.jpg'
 		]);
 		$product1->categories()->attach([1, 2]);
@@ -22,6 +23,7 @@ class ProductTableSeeder extends Seeder
 		$product2 = Product::create([
 			'name'  => 'Centrion Berlingo Multispace',
 			'model' => '1.6 HDI 90 Plus 5DR',
+			'value' => '45.000',
 			'photo' => 'Centrion_Berlingo_Multispace.jpg'
 		]);
 		$product2->categories()->attach([1, 2]);
@@ -29,6 +31,7 @@ class ProductTableSeeder extends Seeder
 		$product3 = Product::create([
 			'name'  => 'Mini Convertible',
 			'model' => '1.6 Cooper S Sidewalk',
+			'value' => '45.000',
 			'photo' => '21b6a37b55ca2a155df97c9329a1270a.jpg'
 		]);
 		$product3->categories()->attach([1, 5]);
@@ -36,6 +39,7 @@ class ProductTableSeeder extends Seeder
 		$product3 = Product::create([
 			'name'  => 'Nissan Qashqai',
 			'model' => '1.6 N-TEC',
+			'value' => '45.000',
 			'photo' => '6f73d1a742aca5458e785b2bedea419c.jpg'
 		]);
 		$product3->categories()->attach([1, 7]);

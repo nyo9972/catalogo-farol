@@ -22,6 +22,17 @@
 	</div>
 </div>
 <div class="form-group">
+	<label for="value" class="col-sm-2 control-label">Preço</label>
+	<div class="col-sm-10{{ $errors->has('value') ? ' has-error' : '' }}">
+		<input type="number" min="0.01" max="10000.00" step="0.01" class="form-control" id="value" name="value" placeholder="Preço do produto" value="@if(isset($product->value)){{ $product->value }}@else{{ old('value') }}@endif">
+		@if ($errors->has('value'))
+		<span class="help-block">
+			<strong>{{ $errors->first('value') }}</strong>
+		</span>
+		@endif
+	</div>
+</div>
+<div class="form-group">
 	<label for="parent" class="col-sm-2 control-label">Categoria <span style="color:red">*</span></label>
 	<div class="col-sm-10{{ $errors->has('category_id') ? ' has-error' : '' }}">
 		<select class="form-control multiselect" id="category_id" name="category_id[]" data-placeholder="Selecione a categoria" multiple="multiple">
